@@ -12,9 +12,9 @@ export default function SingleDataSet(props: SingleDatasetProps) {
       <DatasetTitle title={props.data.name} />
       <Tabs
         overview={{ description: props.data.description }}
-        messages={{ messages: ["fake", "weather"] }}
-        schema={{ schema: { name: "name" } }}
-        apis={{ name: props.data.name }}
+        messages={{ messages: props.data.messages }}
+        schema={{ schemaId: props.data.schemaId }}
+        apis={{geoKeywords: props.data.geoKeywords }}
       />
     </div>
   );

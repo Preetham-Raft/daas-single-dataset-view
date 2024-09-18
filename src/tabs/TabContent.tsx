@@ -1,3 +1,4 @@
+import { TabTypes } from "../models/common";
 import ApisTab from "./ApisTab";
 import MessagesTab from "./MessagesTab";
 import OverviewTab from "./OverviewTab";
@@ -17,13 +18,13 @@ export default function TabContent({ activeTab, tabs }: TabContentProps) {
   }
 
   switch (activeTab) {
-    case "overview":
+    case TabTypes.OVERVIEW:
       return <OverviewTab data={tabData as Overview} />;
-    case "messages":
+    case TabTypes.MESSAGES:
       return <MessagesTab data={tabData as Messages} />;
-    case "schema":
+    case TabTypes.SCHEMA:
       return <SchemaTab data={tabData as Schema} />;
-    case "apis":
+    case TabTypes.APIS:
       return <ApisTab data={tabData as Apis} />;
     default:
       return null;

@@ -9,6 +9,9 @@ function App() {
     stewardOrganization: "Weather LLC",
     stewardName: "Weather Rain",
     stewardEmail: "Weather.gov",
+    messages: [{topic: "topic", retentionTime: 10}],
+    schemaId: "fakeUUID",
+    geoKeywords: ["keyword1","keyword2"]
   };
 
   return <SingleDataSet data={fakeDatasource} />;

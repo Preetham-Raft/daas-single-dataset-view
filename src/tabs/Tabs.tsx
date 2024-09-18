@@ -2,6 +2,7 @@ import { useState } from "react";
 import TabContent from "./TabContent";
 import TabButton from "./TabButton";
 import "../styles/tabs.css";
+import { capitalize } from "../models/common";
 
 export interface TabsProps {
   [key: string]: Overview | Messages | Schema | Apis | undefined;
@@ -18,7 +19,7 @@ export default function Tabs(props: TabsProps) {
           return (
             <TabButton
               key={key}
-              label={key.charAt(0).toUpperCase() + key.slice(1)}
+              label={capitalize(key)}
               isActive={isActive}
               onClick={() => setActiveTab(key)}
             />

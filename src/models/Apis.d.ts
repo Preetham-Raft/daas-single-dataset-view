@@ -1,3 +1,3 @@
 interface Apis {
-  name: string;
+  geoKeywords: string[];
 }

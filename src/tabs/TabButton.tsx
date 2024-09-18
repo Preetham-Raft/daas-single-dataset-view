@@ -13,4 +13,5 @@ export default function TabButton(props: TabButtonProps) {
       {props.label}
     </button>
   );
-}
+};
+

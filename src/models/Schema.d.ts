@@ -1,3 +1,3 @@
 interface Schema {
-  schema: json;
+  schemaId: string;
 }
