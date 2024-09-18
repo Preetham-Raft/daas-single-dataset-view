@@ -1,0 +1,3 @@
+interface Overview {
+  description: string;
+}

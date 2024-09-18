@@ -1,0 +1,3 @@
+interface Messages {
+  messages: string[];
+}

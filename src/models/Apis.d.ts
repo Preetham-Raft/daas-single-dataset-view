@@ -1,0 +1,3 @@
+interface Apis {
+  name: string;
+}
