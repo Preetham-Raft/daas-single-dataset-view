@@ -1,6 +1,7 @@
 .tabs {
   display: flex;
   width: 100%;
+  align-items: flex-end;
 }
 
 .tab {
@@ -25,4 +26,21 @@
 .tab-content {
   padding: 20px;
   width: 100%;
+  display: block;
+}
+
+.button {
+  background-color: #9775fd;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: small;
+  transition: background-color 0.3s;
+  text-align: center;
+  width: 5%;
+}
+
+.button:hover {
+  color: #fff;
 }

@@ -3,10 +3,10 @@ import ApisTab from "./ApisTab";
 import {Messages} from "@raft-tech/daas-kafka-view/src/App"
 import OverviewTab from "./OverviewTab";
 import SchemaTab from "./SchemaTab";
-import { TabsProps } from "./Tabs";
+import { TabsProps,TabKeys } from "./Tabs";
 
 interface TabContentProps {
-  activeTab: string;
+  activeTab: TabKeys;
   tabs: TabsProps;
 }
 

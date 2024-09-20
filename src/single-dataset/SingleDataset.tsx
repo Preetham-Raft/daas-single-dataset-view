@@ -17,10 +17,8 @@ export default function SingleDataSet({ data, back }: SingleDatasetProps) {
           topics={{ topics: data.topics, retentionTime: data.retentionTime }}
           schema={{ schemaId: data.schemaId }}
           apis={{ geoKeywords: data.geoKeywords }}
+          back={back}
         />
-        <button className="button" onClick={back}>
-          Back
-        </button>
       </div>
     </div>
   );
