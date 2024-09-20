@@ -1,3 +1,3 @@
 export default function ApisTab({ data }: { data: Apis }) {
-  return <>{data.geoKeywords}</>;
+  return <>{JSON.stringify(data.geoKeywords)}</>;
 }

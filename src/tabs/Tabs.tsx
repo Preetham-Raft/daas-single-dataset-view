@@ -5,14 +5,14 @@ import "../styles/tabs.css";
 import { capitalize } from "../models/common";
 
 export interface TabsProps {
-  [key: string]: Overview | Messages | Schema | Apis | undefined;
+  [key: string]: Overview | Topics | Schema | Apis | undefined;
 }
 
 export default function Tabs(props: TabsProps) {
   const [activeTab, setActiveTab] = useState(Object.keys(props)[0]);
 
   return (
-    <div className="tabs-container">
+    <>
       <div className="tabs">
         {Object.keys(props).map((key) => {
           const isActive = activeTab === key;
@@ -29,6 +29,6 @@ export default function Tabs(props: TabsProps) {
       <div className="tab-content">
         <TabContent activeTab={activeTab} tabs={props} />
       </div>
-    </div>
+    </>
   );
 }

@@ -6,7 +6,8 @@ interface Datasource {
   stewardOrganization: string;
   stewardName: string;
   stewardEmail: string;
-  schemaId: string,
-  messages: Topics[],
-  geoKeywords: string[]
+  schemaId: string;
+  retentionTime: int;
+  topics: string[];
+  geoKeywords: string[];
 }

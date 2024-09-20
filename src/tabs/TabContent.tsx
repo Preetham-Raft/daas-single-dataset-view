@@ -1,9 +1,9 @@
 import { TabTypes } from "../models/common";
 import ApisTab from "./ApisTab";
-import MessagesTab from "./MessagesTab";
+import {Messages} from "@raft-tech/daas-kafka-view/src/App"
 import OverviewTab from "./OverviewTab";
 import SchemaTab from "./SchemaTab";
-import { TabsProps } from "./tabs";
+import { TabsProps } from "./Tabs";
 
 interface TabContentProps {
   activeTab: string;
@@ -12,7 +12,6 @@ interface TabContentProps {
 
 export default function TabContent({ activeTab, tabs }: TabContentProps) {
   const tabData = tabs[activeTab];
-
   if (!tabData) {
     return null;
   }
@@ -20,8 +19,12 @@ export default function TabContent({ activeTab, tabs }: TabContentProps) {
   switch (activeTab) {
     case TabTypes.OVERVIEW:
       return <OverviewTab data={tabData as Overview} />;
-    case TabTypes.MESSAGES:
-      return <MessagesTab data={tabData as Messages} />;
+    case TabTypes.TOPICS:{
+      const data = tabData as Topics
+      return (
+          <Messages topics={data.topics} retentionTime={data.retentionTime}/>
+    );
+    }
     case TabTypes.SCHEMA:
       return <SchemaTab data={tabData as Schema} />;
     case TabTypes.APIS:

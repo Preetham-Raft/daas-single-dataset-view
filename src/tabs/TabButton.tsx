@@ -4,14 +4,14 @@ interface TabButtonProps {
   onClick: () => void;
 }
 
-export default function TabButton(props: TabButtonProps) {
+export default function TabButton({
+  label,
+  isActive,
+  onClick,
+}: TabButtonProps) {
   return (
-    <button
-      className={`tab ${props.isActive ? "active" : ""}`}
-      onClick={props.onClick}
-    >
-      {props.label}
+    <button className={`tab ${isActive ? "active" : ""}`} onClick={onClick}>
+      {label}
     </button>
   );
-};
-
+}
