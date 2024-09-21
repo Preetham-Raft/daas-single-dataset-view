@@ -1,7 +1,7 @@
 const RaftLightSVGComponent = () => (
   <svg
-    width="101"
-    height="66"
+    width="81"
+    height="50"
     viewBox="0 0 101 66"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

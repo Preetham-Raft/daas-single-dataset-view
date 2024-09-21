@@ -11,6 +11,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@raft-tech/daas-kafka-view": "file:/Users/preetham.mukkara/Desktop/Raft/Github/daas-kafka-view",
+    "schema-viewer": "file:/Users/preetham.mukkara/Desktop/Raft/Github/daas-schema-registry",
+    "geo-builder": "file:/Users/preetham.mukkara/Desktop/Raft/Github/daas-geo-builder",
+    "@types/node": "^22.5.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

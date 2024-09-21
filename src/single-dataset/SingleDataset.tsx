@@ -1,21 +1,25 @@
 import DatasetTitle from "./DatasetTitle";
 import "../styles/sds.css";
-import Tabs from "../tabs/tabs";
-
+import "../index.css";
+import Tabs from "../tabs/Tabs";
 interface SingleDatasetProps {
   data: Datasource;
+  back: () => void;
 }
 
-export default function SingleDataSet(props: SingleDatasetProps) {
+export default function SingleDataSet({ data, back }: SingleDatasetProps) {
   return (
     <div className="dataset-body">
-      <DatasetTitle title={props.data.name} />
-      <Tabs
-        overview={{ description: props.data.description }}
-        messages={{ messages: props.data.messages }}
-        schema={{ schemaId: props.data.schemaId }}
-        apis={{geoKeywords: props.data.geoKeywords }}
-      />
+      <DatasetTitle title={data.name} />
+      <div className="tabs-container">
+        <Tabs
+          overview={{ description: data.description }}
+          topics={{ topics: data.topics, retentionTime: data.retentionTime }}
+          schema={{ schemaId: data.schemaId }}
+          apis={{ geoKeywords: data.geoKeywords }}
+          back={back}
+        />
+      </div>
     </div>
   );
 }
