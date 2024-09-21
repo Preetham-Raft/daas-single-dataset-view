@@ -1,8 +1,8 @@
 import { TabTypes } from "../models/common";
-import ApisTab from "./ApisTab";
 import {Messages} from "@raft-tech/daas-kafka-view/src/App"
 import OverviewTab from "./OverviewTab";
 import {SchemaViewer} from "schema-viewer/src/components/SchemaViewer"
+import {default as GeoBuilder} from "geo-builder/src/App";
 import { TabsProps,TabKeys } from "./Tabs";
 
 interface TabContentProps {
@@ -30,7 +30,7 @@ export default function TabContent({ activeTab, tabs }: TabContentProps) {
       return <SchemaViewer schemaId={data.schemaId}/>;
     }
     case TabTypes.APIS:
-      return <ApisTab data={tabData as Apis} />;
+      return <GeoBuilder />;
     default:
       return null;
   }
