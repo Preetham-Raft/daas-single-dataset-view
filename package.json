@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@raft-tech/daas-kafka-view": "file:/Users/preetham.mukkara/Desktop/Raft/Github/daas-kafka-view",
+    "schema-viewer": "file:/Users/preetham.mukkara/Desktop/Raft/Github/daas-schema-registry",
+    "@types/node": "^22.5.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

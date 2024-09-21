@@ -2,7 +2,7 @@ import { TabTypes } from "../models/common";
 import ApisTab from "./ApisTab";
 import {Messages} from "@raft-tech/daas-kafka-view/src/App"
 import OverviewTab from "./OverviewTab";
-import SchemaTab from "./SchemaTab";
+import {SchemaViewer} from "schema-viewer/src/components/SchemaViewer"
 import { TabsProps,TabKeys } from "./Tabs";
 
 interface TabContentProps {
@@ -25,8 +25,10 @@ export default function TabContent({ activeTab, tabs }: TabContentProps) {
           <Messages topics={data.topics} retentionTime={data.retentionTime}/>
     );
     }
-    case TabTypes.SCHEMA:
-      return <SchemaTab data={tabData as Schema} />;
+    case TabTypes.SCHEMA: {
+      const data = tabData as Schema
+      return <SchemaViewer schemaId={data.schemaId}/>;
+    }
     case TabTypes.APIS:
       return <ApisTab data={tabData as Apis} />;
     default:
